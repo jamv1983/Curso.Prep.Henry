@@ -29,8 +29,9 @@ function incrementarPorUno(array) {
   // [4,5,6,1,2,5]
   // [5,6,7,2,3,6]
   var nuevoarray = []
+  var numero=0
   for (var i=0; i<array.length;i++){
-    var numero = array[i]
+    numero = array[i]
     nuevoarray.push(numero+1)
   }
   return nuevoarray;
@@ -41,7 +42,7 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
-  array.push(elemento);
+    array.push(elemento);
   return array;
 }
 
@@ -115,7 +116,7 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
-  var maxnum=numeros[0]
+  var maxnum=0
   for (let i=1;i<numeros.length;i++){
     if(numeros[i]>maxnum){
         maxnum=numeros[i]
@@ -129,13 +130,13 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
-var numeros = arguments
+//var numeros = arguments
 var multiplicacion=1
-if (numeros.length === 0){
+if (arguments.length === 0){
   return 0
 }
-for (let i=0; i<numeros.length; i++){
-  multiplicacion = multiplicacion * numeros[i]
+for (let i=0; i<arguments.length; i++){
+  multiplicacion = multiplicacion * arguments[i]
 }
 return multiplicacion
 }
@@ -237,12 +238,12 @@ function breakStatement(numero) {
   //Pista: usá el statement 'break'
   // Tu código:
   var sumaarray=[]
-  var suma=numero
+  //var suma=numero
   for (var i=0; i<10; i++){
-    suma=suma+2
-    if(suma===i){
+    numero=numero+2
+    if(numero===i){
       break;
-    }sumaarray.push(suma)
+    }sumaarray.push(numero)
   }
   if (i<10){
     return "Se interrumpió la ejecución"
@@ -259,12 +260,12 @@ function continueStatement(numero) {
   //Pista: usá el statement 'continue'
   // Tu código:
   var arraysuma=[]
-  var suma=numero;
+  //var suma=numero;
   for (var i=0; i<10; i++){
     if(i===5){
       continue
-    }suma=suma+2
-    arraysuma.push(suma)
+    }numero=numero+2
+    arraysuma.push(numero)
   }
   return arraysuma;
 }
